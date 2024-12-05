@@ -13,7 +13,7 @@ spec:
         app: orders
     spec:
       containers:
-        - name: products
+        - name: orders
           image: 218266829911.dkr.ecr.us-east-1.amazonaws.com/orders:latest
           ports:
             - containerPort: 8080
