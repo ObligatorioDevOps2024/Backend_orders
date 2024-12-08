@@ -8,5 +8,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80           # Puerto externo al que se conecta
-      targetPort: 8080    # Puerto al que se conecta el contenedor
+      targetPort: 6500    # Puerto al que se conecta el contenedor
   type: LoadBalancer      # Crea un Load Balancer en AWS
