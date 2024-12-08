@@ -16,4 +16,12 @@ spec:
         - name: orders
           image: 218266829911.dkr.ecr.us-east-1.amazonaws.com/orders:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 6500
+          env:
+            - name: PAYMENTS_SERVICE_URL
+              value: "http://backend-payments-service.default.svc.cluster.local:5000"
+            - name: SHIPPING_SERVICE_URL
+              value: "http://backend-shipping-service.default.svc.cluster.local:6000"
+            - name: PRODUCTS_SERVICE_URL
+              value: "http://backend-products-service.default.svc.cluster.local:7000"
+
